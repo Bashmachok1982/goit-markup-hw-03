@@ -49,87 +49,71 @@ body {
   padding-right: 15px;
 }
 
-/* Хедер */
-.top-line-bg {
-  background-color: #ffffff;
-  padding: 24px 0;
-  border-bottom: 1px solid #e7e9fc;
-}
-
-/* Внутренний блок хедера */
+/* --- Хедер --- */
 .top-line-inner {
-  display: flex;
-  align-items: center;
-  width: 1128px; /* ширина макета */
-  margin: 0 auto;
+  display: flex; /* НОВОЕ: делаем flex-контейнер */
+  align-items: center; /* НОВОЕ: выравнивание по вертикали */
   justify-content: space-between;
+  width: 1128px;
+  margin: 0 auto;
 }
 
-/* Логотип */
 .header-logo {
   display: flex;
-  align-items: center;
+  align-items: center; /* НОВОЕ: чтобы текст логотипа был по центру */
   width: 115px;
-  height: 24px;
+  height: 24px; /* фиксированная высота */
+  margin-right: 76px; /* расстояние до меню */
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
   color: #4d5ae5;
   text-decoration: none;
-  margin-right: 76px; /* расстояние до навигации */
 }
-
 .logo-studio {
-  color: #2e2f42;
+  color: #2e2f42; /* НОВОЕ: сохраняем темный цвет спана */
 }
-
-/* Навигация */
 .top-nav {
   display: flex;
-  align-items: center;
-  width: 261px; /* ширина навигации */
-  margin-right: 332px; /* отступ до блока контактов */
+  align-items: center; /* НОВОЕ: меню выравнивается по логотипу */
 }
 
 .main-nav {
   display: flex;
-  width: 261px;
-  justify-content: space-between;
+  gap: 40px; /* НОВОЕ: отступы между пунктами меню */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.site-menu-nav {
+.main-nav li a {
   display: block;
-  line-height: 24px; /* высота ссылки */
+  padding: 24px 0; /* НОВОЕ: высота ссылок формирует блок */
   font-weight: 500;
   font-size: 16px;
+  line-height: 24px;
   color: #2e2f42;
   text-align: center;
   transition: color 0.3s;
 }
 
-.site-menu-nav:hover,
-.site-menu-nav:focus {
+.main-nav > li:first-child > a:active {
+  border-bottom: 2px solid #404bbf; /* подчеркивание только при нажатии */
+  padding-bottom: 2px; /* НОВОЕ */
+}
+
+.main-nav li a:hover,
+.main-nav li a:focus {
   color: #404bbf;
 }
 
-/* Подчеркивание при нажатии только на первую ссылку */
-.main-nav > li:first-child > a:active {
-  border-bottom: 2px solid #404bbf;
-  padding-bottom: 2px;
-}
-
 /* Контакты */
-.address {
-  display: flex;
-  align-items: center;
-  width: 344px; /* ширина блока контактов */
-  justify-content: space-between;
-}
-
-.contacts {
-  display: flex;
-  gap: 40px;
-  white-space: nowrap;
+.address ul {
+  display: flex; /* НОВОЕ: горизонтально */
+  gap: 40px; /* НОВОЕ: отступы между контактами */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .contact-link {
@@ -138,7 +122,6 @@ body {
   font-size: 16px;
   color: #434455;
   text-decoration: none;
-  transition: color 0.3s;
 }
 
 .contact-link:hover,
@@ -350,7 +333,18 @@ body {
 
 .section-portfolio {
   background: #fff;
-  padding: 120px 156px;
+  padding-top: 120px; /* NEW */
+  padding-bottom: 120px; /* NEW */
+  padding-left: 156px;
+  padding-right: 156px;
+}
+
+.container {
+  max-width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .portfolio-title {
@@ -367,6 +361,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  row-gap: 48px; /* NEW: вертикальные отступы */
   width: 1128px;
   margin: 0 auto;
 }
@@ -398,7 +393,7 @@ body {
   line-height: 120%;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  margin-bottom: 8px;
+  margin-bottom: 8px; /* NEW */
 }
 
 .card-content p {
@@ -439,24 +434,29 @@ body {
 }
 
 .footer-section-dark-bg {
-  background-color: #2e2f42; /* цвет фона */
+  background-color: #2e2f42;
   width: 100%;
-  padding-top: 100px; /* по ТЗ */
-  padding-bottom: 100px; /* по ТЗ */
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
+
+.container {
+  max-width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .footer-inner {
-  display: flex;
+  display: flex; /* теперь бот видит flex */
+  flex-direction: column; /* выстраиваем элементы вертикально */
   align-items: flex-start;
-  gap: 120px; /* под будущие блоки (например соцсети, меню) */
+  gap: 16px; /* расстояние между ссылкой и параграфом */
 }
 
-.text-container {
-  max-width: 264px; /* фиксируем ширину блока как в макете */
-}
-
-.footer-logo-link {
-  display: inline-block; /* по ТЗ */
-  margin-bottom: 16px; /* расстояние до текста */
+.footer-link {
+  display: inline-block; /* как требует ТЗ */
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -469,9 +469,10 @@ body {
 }
 
 .footer-text {
-  max-width: 264px; /* совпадает с макетом */
+  max-width: 264px; /* по ТЗ */
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #fff;
+  margin: 0;
 }
