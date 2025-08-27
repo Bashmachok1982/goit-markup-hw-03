@@ -1,10 +1,17 @@
-/* Сброс стилей */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  padding: 0; /*Добавил*/
+  margin: 0; /*Добавил*/
+  box-sizing: border-box; //*Добавил*/
 }
-
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #434455;
+  background-color: #fff;
+  line-height: 1.5;
+}
+/*Добавил*/
 h1,
 h2,
 h3,
@@ -14,180 +21,177 @@ h6,
 p {
   margin: 0;
 }
-
+/*Добавил*/
 ul,
 ol {
-  margin: 0;
   padding-left: 0;
+  margin: 0;
   list-style: none;
 }
-
+/*Добавил*/
+img {
+  display: block;
+  max-width: 100%;
+}
+/*Добавил*/
 a {
   text-decoration: none;
   color: inherit;
 }
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Базовые стили */
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #000000;
-  line-height: 1.5;
-}
-
-/* Контейнер */
+/*добавил*/
 .container {
   max-width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0px 156px;
+  padding: 0px 15px;
 }
-
-/* --- Хедер --- */
-.top-line-inner {
-  display: flex; /* НОВОЕ: делаем flex-контейнер */
-  align-items: center; /* НОВОЕ: выравнивание по вертикали */
-  justify-content: space-between;
-  width: 1128px;
-  margin: 0 auto;
+.top-line-bg {
+  background: #fff;
+  border-bottom: 1px solid #e7e9fc; /* Добавил толщину рамки хедера*/
 }
-
-.header-logo {
-  display: flex;
-  align-items: center; /* НОВОЕ: чтобы текст логотипа был по центру */
-  width: 115px;
-  height: 24px; /* фиксированная высота */
-  margin-right: 76px; /* расстояние до меню */
+/*Добавил*/
+.header-content {
+  display: flex; /* элементы расположены в строчку*/
+  justify-content: space-between; /* между элементами равные промежутки*/
+  align-items: center; /* расположить элементы по центру*/
+  width: 1128px; /*Ширина контента*/
+  margin: 0 auto; /*промежутки обнулены*/
+}
+.logo-link.logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
+  line-height: 117%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   color: #4d5ae5;
-  text-decoration: none;
+  width: 115px; /* Добавил ширину логотипа*/
+  margin-right: 76px; /* Добавил расстояние в право до следующего єлемента*/
+  height: 24px; /*Добавил высоту логотипа*/
+  display: flex; /*создаем контейнер*/
+  align-items: center; /* НОВОЕ: чтобы текст логотипа был по центру */
+  text-decoration: none; /* чтобы не подчеркивалось*/
 }
 .logo-studio {
-  color: #2e2f42; /* НОВОЕ: сохраняем темный цвет спана */
+  color: #2e2f42;
 }
+/*Добавил*/
 .top-nav {
-  display: flex;
-  align-items: center; /* НОВОЕ: меню выравнивается по логотипу */
+  display: flex; /*Элементы блока навигации расположены в строчку*/
+  align-items: center; /*Размещение элементов по вертикали*/
 }
-
-.main-nav {
-  display: flex;
+.menu-nav {
+  display: flex; /*флекс-контейнер*/
   gap: 40px; /* НОВОЕ: отступы между пунктами меню */
-  margin: 0;
-  padding: 0;
   list-style: none;
+  width: 261px; /*Добавил ширину блока навигации*/
 }
-
-.main-nav li a {
-  display: block;
-  padding: 24px 0; /* НОВОЕ: высота ссылок формирует блок */
+.menu-nav a {
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
   color: #2e2f42;
   text-align: center;
-  transition: color 0.3s;
 }
-
-.main-nav > li:first-child > a:active {
-  border-bottom: 2px solid #404bbf; /* подчеркивание только при нажатии */
-  padding-bottom: 2px; /* НОВОЕ */
-}
-
-.main-nav li a:hover,
-.main-nav li a:focus {
+.menu-nav a:hover,
+.menu-nav a:focus {
   color: #404bbf;
 }
-
-/* Контакты */
-.address ul {
-  display: flex; /* НОВОЕ: горизонтально */
-  gap: 40px; /* НОВОЕ: отступы между контактами */
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.menu-nav li:first-child a:active {
+  text-decoration: underline; /* подчеркивается при нажатии мышкой только первый элемент списка*/
 }
-
+.site-menu-nav {
+  padding: 24px 0;
+}
 .contact-link {
-  display: block;
-  line-height: 24px;
+  font-weight: 400;
   font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
   color: #434455;
-  text-decoration: none;
 }
-
 .contact-link:hover,
 .contact-link:focus {
   color: #404bbf;
 }
+.address {
+  font-style: normal;
+}
+/*Добавил контейнер с контактами*/
+.contacts {
+  display: flex; /*контакты расположены в строчку*/
+  justify-content: space-between; /*у элементов одинаковые промежутки*/
+  align-items: center; /*элементы расположены по центру*/
+  margin-left: 332px; /* промежуток от контактов влево до навигации*/
+  gap: 40px; /* Промежуток между контактами*/
+  width: 344px; /*Размер блока контактов из макета*/
+}
+.contacts li {
+  padding: 24px 0px; /*Добавляем паддинги для ссылок с контактами*/
+}
+/*Добавил*/
+.contacts:last-child {
+  margin-right: 156px; /*последний ребенок из списка имеет правый отступ */
+}
 .dark-bg {
   background: #2e2f42;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 188px;
-  padding-bottom: 292px;
+  padding: 188px 0; /*добавил*/
+  width: 100%; /*добавил*/
 }
-
+.container {
+  max-width: 1158px;
+  margin: 0px 156px;
+  padding: 0px 15px;
+}
 .hero-content {
-  width: 496px; /* max-width заголовка */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 48px;
-  text-align: center;
+  display: flex; /*добавил*/
+  justify-content: center; /*добавил*/
+  align-items: center; /*добавил*/
+  flex-direction: column; /*добавил*/
 }
-
 .hero-title {
   color: #fff;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  margin: 0;
-  max-width: 496px; /* как в ТЗ */
+  text-align: center;
+  max-width: 496px; /*добавил*/
+  margin-bottom: 48px; /*добавил*/
 }
-
 .hero-btn {
-  display: block;
-  min-width: 169px; /* добавлено по ТЗ */
-  height: 56px;
-  border-radius: 4px;
-  padding: 16px 32px;
   background: #4d5ae5;
   color: #fff;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 150%;
   letter-spacing: 0.04em;
   cursor: pointer;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-  border: none;
-  text-align: center;
-  white-space: nowrap;
-  transition: background 0.3s;
+  display: block; /*добавил*/
+  min-width: 169px; /*добавил*/
+  height: 56px; /*добавил*/
+  border: none; /*добавил*/
+  background-color: #4d5ae5; /*добавил*/
+  border-radius: 4px; /*добавил*/
+  border: none; /*добавил*/
+  text-align: center; /*добавил*/
+  white-space: nowrap; /*добавил*/
+  margin: 0 auto; /*добавил*/
 }
-
 .hero-btn:hover,
 .hero-btn:focus {
-  background: #404bbf;
+  background-color: #404bbf;
 }
-
 .features {
-  padding: 120px 156px; /* верх/низ 120, лев/прав 156 */
   background: #fff;
+  padding: 120px 0; /*добавил*/
 }
-
-.visually-hidden {
+.container {
+  max-width: 1158px;
+  margin: 0px 156px;
+  padding: 0px 15px;
+}
+/*добавил*/
+.title-visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -195,284 +199,277 @@ body {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
+  clip-path: inset (100%);
+  clip: rect (0 0 0 0);
   overflow: hidden;
-}
-
-.wrapper {
-  width: 1128px; /* общий контейнер */
-  margin: 0 auto;
-}
-
-.wrapper ul {
-  display: flex;
-  justify-content: flex-start;
-  gap: calc((1128px - 4 * 264px) / 3); /* формула для промежутков */
-  flex-wrap: nowrap;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.wrapper ul li {
-  width: 264px; /* фиксированная ширина карточки */
-  height: 104px; /* фиксированная высота карточки */
-}
-
-.features-items {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-}
-
-.feature-items-title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.2;
-  margin-bottom: 8px;
-}
-
-.feature-items-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0; /* убираем лишние отступы */
-}
-/* Секция с командой */
-.light-bg {
-  background: #f4f4fd;
-  padding: 120px 156px; /* отступы сверху/снизу и слева/справа */
-}
-.team-title {
-  text-align: center;
-  margin-bottom: 72px;
-}
-
-.team-list {
-  display: flex;
-  justify-content: space-between;
-  width: 1128px;
-  margin: 0 auto;
-}
-
-.team-card {
-  width: 264px;
-  height: 428px;
-  background: #fff;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.team-image {
-  width: 264px;
-  height: 260px;
-  object-fit: cover;
-}
-
-.team-content {
-  height: calc(428px - 260px);
-  padding: 32px 16px;
-  display: flex;
-}
-
-.team-info {
-  width: 100%;
-  height: 104px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.team-name {
-  margin: 0 0 8px 0;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 120%;
+  letter-spacing: 0.02em;
   color: #2e2f42;
 }
-
-.team-role {
-  margin: 0 0 8px 0;
+.features-content {
+  display: flex; /*добавил*/
+  gap: 24px; /*добавил*/
+}
+.features-item {
+  width: calc((100% - 72px) / 4); /*добавил*/
+}
+.feature-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 8px; /*добавил*/
+}
+.feature-text {
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 150%;
+  letter-spacing: 0.02em;
   color: #434455;
 }
-
+.light-bg {
+  background: #f4f4fd;
+  padding: 120px 0; /*добавил*/
+}
+.container {
+  max-width: 1158px;
+  margin: 0px 156px;
+  padding: 0px 15px;
+}
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  text-transform: capitalize;
+  text-align: center;
+}
+.team-list {
+  gap: 24px;
+  display: flex; /*добавил*/
+  margin-top: 72px;
+}
+.team-card {
+  background: #fff;
+  border-radius: 0px 0px 4px 4px; /*добавил*/
+  width: 264px; /*добавил ширину карты*/
+  height: 428px; /*Добавил высоту карты*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*добавил*/
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /*добавил*/
+  display: flex; /*добавил*/
+  flex-direction: column; /*добавил*/
+  overflow: hidden; /*добавил*/
+  width: calc((100% – 72px) / 4); /*добавил*/
+}
+.team-card:hover,
+.team-card:focus {
+  transform: translateY(-5px); /*добавил*/
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /*добавил*/
+}
+.team-content {
+  width: 232px; /*добавил*/
+  height: 104px; /*добавил*/
+  margin: 32px auto; /*добавил*/
+  display: flex; /*добавил*/
+  flex-direction: column; /*добавил располагает в столбик элементы*/
+  align-items: center; /*добавил*/
+  text-align: center; /*добавил*/
+  padding: 32px 0px; /*добавил*/
+  justify-content: center; /*по горизонтали центрирование*/
+}
+.team-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  text-align: center; /*добавил*/
+  margin-bottom: 8px; /*добавил*/
+}
+.team-role {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #434455;
+  text-align: center; /*добавил*/
+  margin-bottom: 8px; /*добавил*/
+}
 .team-icons {
-  width: 232px;
-  height: 40px;
-  display: flex;
-  justify-content: space-between;
+  width: 232px; /*добавил*/
+  height: 40px; /*добавил*/
+  display: flex; /*добавил*/
+  justify-content: center;
+  gap: 24px;
 }
-
 .team-icons img {
-  width: 40px;
-  height: 40px;
-  display: block;
-  cursor: pointer;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  width: 40px; /*добавил*/
+  height: 40px; /*добаил*/
+  display: block; /*добавил*/
+  cursor: pointer; /*добавил*/
+  transition: transform 0.2s ease, filter 0.2s ease; /*добавил*/
 }
-
+/*добавил*/
 .team-icons img:hover {
   transform: scale(1.06);
   filter: brightness(1.1);
 }
-
 .section-portfolio {
   background: #fff;
-  padding-top: 120px; /* NEW */
-  padding-bottom: 120px; /* NEW */
-  padding-left: 156px;
-  padding-right: 156px;
+  padding: 120px 0 120px 0; /*добавил*/
 }
-
-.container {
-  max-width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 .portfolio-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 111%;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  text-transform: capitalize;
   text-align: center;
-  margin-bottom: 72px;
+  margin-bottom: 72px; /*добавил*/
 }
-
 .portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  row-gap: 48px; /* NEW: вертикальные отступы */
-  width: 1128px;
-  margin: 0 auto;
+  display: flex; /*добавил*/
+  width: 1128px; /*добавил*/
+  margin: 0 auto; /*добавил*/
+  flex-wrap: wrap; /*добавил*/
+  gap: 24px; /*добавил*/
+  row-gap: 48px; /*добавил*/
 }
-
+/*добавил*/
 .portfolio-item {
   position: relative;
   width: 360px;
   height: 420px;
   background: #fff;
 }
-
+/*добавил*/
 .portfolio-item img {
   display: block;
   width: 360px;
   height: 300px;
   object-fit: cover;
 }
-
+/*добавил*/
 .card-content {
   width: 360px;
   height: 120px;
   padding: 32px 16px;
   box-sizing: border-box;
+  border: 1px solid #e7e9fc; /*добавил*/
+  border-top: none; /*добавил*/
+}
+/*добавил*/
+.item-overlay-container {
+  position: relative;
+  width: 360px;
+  height: 300px;
+}
+/*добавил*/
+.item-overlay-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* Добавил */
+.overlay-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* Добавил */
+.overlay-img img:first-child {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.card-content h3 {
+/* Добавил */
+.overlay-img img:last-child {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Добавил */
+.overlay-img:hover img:first-child {
+  display: none;
+}
+
+/* Добавил */
+.overlay-img:hover img:last-child {
+  display: block;
+}
+.text-overlay {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  position: absolute; /*добавил*/
+  top: 40px; /*добавил*/
+  left: 32px; /*добавил*/
+  right: 32px; /*добавил*/
+  pointer-events: none; /*добавил*/
+}
+.card-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  margin-bottom: 8px; /* NEW */
+  margin-bottom: 8px; /*добавил*/
 }
-
-.card-content p {
+.card-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #434455;
-  margin: 0;
+  margin: 0; /*добавил*/
 }
-
-.overlay-container {
-  position: relative;
+.footer-section-dark-bg {
+  background: #2e2f42;
+  padding: 100px 0; /*добавил*/
 }
-
-.overlay-container .hover-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
+.logo-link-footer {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 117%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #4d5ae5;
+  display: inline-block; /*добавил*/
+  margin-bottom: 16px; /*добавил*/
 }
-
-.overlay-container:hover .hover-image {
-  display: block;
+.logo-studio-footer {
+  color: #f4f4fd;
 }
-
-.overlay-container .overlay-text {
-  position: absolute;
-  top: 40px;
-  left: 32px;
-  right: 32px;
-  color: #fff;
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.02em;
-  pointer-events: none;
-}
-
-.footer-section-dark-bg {
-  background-color: #2e2f42;
-  width: 100%;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.container {
-  max-width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.footer-inner {
-  display: flex; /* теперь бот видит flex */
-  flex-direction: column; /* выстраиваем элементы вертикально */
-  align-items: flex-start;
-  gap: 16px; /* расстояние между ссылкой и параграфом */
-}
-
-.footer-link {
-  display: inline-block; /* как требует ТЗ */
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: #4d5ae5;
-  text-decoration: none;
-}
-
-.logo-studio-footer {
-  color: #fff;
-}
-
-.footer-text {
-  max-width: 264px; /* по ТЗ */
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #fff;
-  margin: 0;
+  color: #f4f4fd;
+  max-width: 264px; /*добавил*/
 }
