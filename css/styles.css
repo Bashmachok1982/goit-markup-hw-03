@@ -246,10 +246,8 @@ a {
 .team-card {
   background: #fff;
   border-radius: 0px 0px 4px 4px; /*добавил*/
-  /*width: 264px; /*добавил ширину карты*/
   height: 428px; /*Добавил высоту карты*/
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*добавил*/
-  /*transition: transform 0.3s ease, box-shadow 0.3s ease; /*добавил*/
   display: flex; /*добавил*/
   flex-direction: column; /*добавил*/
   overflow: hidden; /*добавил*/
@@ -332,9 +330,7 @@ a {
 }
 /*добавил*/
 .portfolio-item {
-  /*position: relative;*/
   width: 360px;
-  /*height: 420px;*/
   background: #fff;
 }
 /*добавил*/
