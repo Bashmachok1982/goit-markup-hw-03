@@ -31,7 +31,6 @@ ol {
 /*Добавил*/
 img {
   display: block;
-  max-width: 100%;
 }
 /*Добавил*/
 a {
@@ -41,7 +40,7 @@ a {
 /*добавил*/
 .container {
   max-width: 1158px;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 0px 15px;
 }
 .top-line-bg {
@@ -53,13 +52,6 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-/*Добавил*/
-/*.header-content {
-  display: flex; /* элементы расположены в строчку*/
-/*justify-content: space-between; /* между элементами равные промежутки*/
-/*align-items: center; /* расположить элементы по центру*/
-/*width: 1128px; /*Ширина контента*/
-/*margin: 0 auto;} /*промежутки обнулены*/
 
 .logo-link-logo {
   font-family: 'Raleway', sans-serif;
@@ -152,11 +144,7 @@ a {
   margin: 0px 156px;
   padding: 0px 15px;
 }
-/*.hero-content {
-  /*display: flex; /*добавил*/
-/*justify-content: center; /*добавил*/
-/*align-items: center; /*добавил*/
-/*flex-direction: column; }/*добавил*/
+
 .hero-title {
   color: #fff;
   font-weight: 700;
@@ -210,12 +198,6 @@ a {
   clip-path: inset (100%);
   clip: rect (0 0 0 0);
   overflow: hidden;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 120%;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
 }
 .features-content {
   display: flex; /*добавил*/
@@ -469,10 +451,7 @@ a {
 .logo-studio-footer {
   color: #f4f4fd;
 }
-/*.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;}*/
+
 .footer-text {
   font-weight: 400;
   font-size: 16px;
