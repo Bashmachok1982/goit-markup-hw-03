@@ -140,7 +140,7 @@ a {
 }
 .container {
   max-width: 1158px;
-  margin: 0px 156px;
+  margin: 0 auto;
   padding: 0px 15px;
 }
 
@@ -226,6 +226,7 @@ a {
 }
 .container {
   max-width: 1158px;
+  margin: 0 auto;
   padding: 0px 15px;
 }
 .team-title {
