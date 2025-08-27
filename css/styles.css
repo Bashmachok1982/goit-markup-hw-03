@@ -194,8 +194,8 @@ a {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset (100%);
-  clip: rect (0 0 0 0);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }
 .features-content {
@@ -226,7 +226,6 @@ a {
 }
 .container {
   max-width: 1158px;
-  margin: 0px 156px;
   padding: 0px 15px;
 }
 .team-title {
@@ -336,13 +335,6 @@ a {
   width: 360px;
   height: 420px;
   background: #fff;
-}
-/*добавил*/
-.portfolio-item img {
-  display: block;
-  width: 360px;
-  height: 300px;
-  object-fit: cover;
 }
 /*добавил*/
 .card-content {
