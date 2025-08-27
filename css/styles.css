@@ -41,22 +41,27 @@ a {
 /*добавил*/
 .container {
   max-width: 1158px;
-  margin: 0px 156px;
+  margin: 0px auto;
   padding: 0px 15px;
 }
 .top-line-bg {
   background: #fff;
   border-bottom: 1px solid #e7e9fc; /* Добавил толщину рамки хедера*/
 }
-/*Добавил*/
-.header-content {
-  display: flex; /* элементы расположены в строчку*/
-  justify-content: space-between; /* между элементами равные промежутки*/
-  align-items: center; /* расположить элементы по центру*/
-  width: 1128px; /*Ширина контента*/
-  margin: 0 auto; /*промежутки обнулены*/
+.top-line-bg .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.logo-link.logo {
+/*Добавил*/
+/*.header-content {
+  display: flex; /* элементы расположены в строчку*/
+/*justify-content: space-between; /* между элементами равные промежутки*/
+/*align-items: center; /* расположить элементы по центру*/
+/*width: 1128px; /*Ширина контента*/
+/*margin: 0 auto;} /*промежутки обнулены*/
+
+.logo-link-logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -70,6 +75,7 @@ a {
   display: flex; /*создаем контейнер*/
   align-items: center; /* НОВОЕ: чтобы текст логотипа был по центру */
   text-decoration: none; /* чтобы не подчеркивалось*/
+  padding: 24px 0; /*Добавил*/
 }
 .logo-studio {
   color: #2e2f42;
@@ -137,18 +143,20 @@ a {
   background: #2e2f42;
   padding: 188px 0; /*добавил*/
   width: 100%; /*добавил*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container {
   max-width: 1158px;
   margin: 0px 156px;
   padding: 0px 15px;
 }
-.hero-content {
-  display: flex; /*добавил*/
-  justify-content: center; /*добавил*/
-  align-items: center; /*добавил*/
-  flex-direction: column; /*добавил*/
-}
+/*.hero-content {
+  /*display: flex; /*добавил*/
+/*justify-content: center; /*добавил*/
+/*align-items: center; /*добавил*/
+/*flex-direction: column; }/*добавил*/
 .hero-title {
   color: #fff;
   font-weight: 700;
@@ -191,7 +199,7 @@ a {
   padding: 0px 15px;
 }
 /*добавил*/
-.title-visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -248,11 +256,11 @@ a {
   color: #2e2f42;
   text-transform: capitalize;
   text-align: center;
+  margin-bottom: 72px; /*добавил*/
 }
 .team-list {
   gap: 24px;
   display: flex; /*добавил*/
-  margin-top: 72px;
 }
 .team-card {
   background: #fff;
@@ -444,6 +452,7 @@ a {
 .footer-section-dark-bg {
   background: #2e2f42;
   padding: 100px 0; /*добавил*/
+  width: 100%; /*Добавил*/
 }
 .logo-link-footer {
   font-family: 'Raleway', sans-serif;
@@ -460,11 +469,10 @@ a {
 .logo-studio-footer {
   color: #f4f4fd;
 }
-.footer-content {
+/*.footer-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-}
+  align-items: flex-start;}*/
 .footer-text {
   font-weight: 400;
   font-size: 16px;
