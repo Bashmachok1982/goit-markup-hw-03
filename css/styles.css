@@ -37,12 +37,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-/*добавил*/
-.container {
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0px 15px;
-}
 .top-line-bg {
   background: #fff;
   border-bottom: 1px solid #e7e9fc; /* Добавил толщину рамки хедера*/
@@ -52,7 +46,12 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-
+/*добавил*/
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
 .logo-link-logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
